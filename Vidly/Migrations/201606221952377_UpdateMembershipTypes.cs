@@ -8,14 +8,15 @@ namespace Vidly.Migrations
         public override void Up()
         {
             Sql("UPDATE MembershipTypes SET Name = 'Pay As You Go' WHERE Id = 1");
-            Sql("UPDATE MembershipTypes SET Name = 'Monthly Membership' WHERE Id = 2");
-            Sql("UPDATE MembershipTypes SET Name = 'Quarterly Membership' WHERE Id = 3");
-            Sql("UPDATE MembershipTypes SET Name = 'Annual Membership' WHERE Id = 4");
+            Sql("UPDATE MembershipTypes SET Name = 'Monthly' WHERE Id = 2");
+            Sql("UPDATE MembershipTypes SET Name = 'Quarterly' WHERE Id = 3");
+            Sql("UPDATE MembershipTypes SET Name = 'Annual' WHERE Id = 4");
 
         }
         
         public override void Down()
         {
+            Sql("UPDATE MembershipTypes SET Name = null");
         }
     }
 }
